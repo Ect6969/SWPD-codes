@@ -1,0 +1,79 @@
+<!--(21b). To use JavaScript to perform the following
+operations:
+b. perform arithmetic operations on two numbers
+entered into textboxes. Use Radio buttons to select
+arithmetic operations (Addition, Subtraction,
+Multiplication and Division). Display the result in
+another textbox.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-21b | tapas soni</title>
+    <script>
+        function performOperation() {
+            // Get the input values from the textboxes
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+
+            // Get the selected arithmetic operation
+            const selectedOperation = document.querySelector('input[name="operation"]:checked').value;
+
+            // Check if both input values are valid numbers
+            if (!isNaN(num1) && !isNaN(num2)) {
+                // Perform the selected arithmetic operation
+                let result;
+                switch (selectedOperation) {
+                    case 'addition':
+                        result = num1 + num2;
+                        break;
+                    case 'subtraction':
+                        result = num1 - num2;
+                        break;
+                    case 'multiplication':
+                        result = num1 * num2;
+                        break;
+                    case 'division':
+                        if (num2 !== 0) {
+                            result = num1 / num2;
+                        } else {
+                            alert('Cannot divide by zero.');
+                            return;
+                        }
+                        break;
+                    default:
+                        alert('Invalid operation selected.');
+                        return;
+                }
+
+                // Display the result in the output textbox
+                document.getElementById('resultOutput').value = result;
+            } else {
+                // Display an error message if the input values are not valid numbers
+                alert('Please enter valid numbers.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+
+    <label for="number1">Enter number 1:</label>
+    <input type="text" id="number1"><br><br>
+
+    <label for="number2">Enter number 2:</label>
+    <input type="text" id="number2"><br><br>
+
+    <label>Choose an operation:</label>
+    <input type="radio" name="operation" value="addition" checked> Addition
+    <input type="radio" name="operation" value="subtraction"> Subtraction
+    <input type="radio" name="operation" value="multiplication"> Multiplication
+    <input type="radio" name="operation" value="division"> Division
+<br><br>
+    <button onclick="performOperation()">Perform Operation</button><br>
+
+    <label for="resultOutput">Result:</label><br>
+    <input type="text" id="resultOutput" readonly>
+</body>
+</html>

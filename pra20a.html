@@ -1,0 +1,31 @@
+<!--(20a). To use JavaScript to perform the following
+operations:
+a. take input of student name and address and
+display in a dialog box-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-20a | tapas soni </title>
+    <script>
+        function displayStudentInfo() {
+            // Get user input for name and address
+            const studentName = prompt('Enter student name:');
+            const studentAddress = prompt('Enter student address:');
+
+            // Display information in a dialog box
+            if (studentName && studentAddress) {
+                alert('Student Information:\nName: ' + studentName + '\nAddress: ' + studentAddress);
+            } else {
+                alert('Invalid input. Please enter both name and address.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Information</h1>
+
+    <button onclick="displayStudentInfo()">Enter Student Information</button>
+</body>
+</html>

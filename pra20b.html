@@ -1,0 +1,42 @@
+<!--(20b). To use JavaScript to perform the following
+operations:
+b. change background color of webpage as selected
+by user from a list of colors given in combo box.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-20b | tapas soni</title>
+    <script>
+        function changeBackgroundColor() {
+            const selectedColor = document.getElementById('colorSelect').value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</head>
+<body>
+    <h1>Change Background Color</h1>
+
+    <label for="colorSelect">Select a color:</label>
+    <select id="colorSelect">
+        <option value="Aqua">Aqua</option>
+        <option value="DarkGoldenRod">DarkGoldenRod</option>
+        <option value="DarkBlue">DarkBlue</option>
+        <option value="DeepPink">DeepPink</option>
+        <option value="FireBrick">FireBrick</option>
+        <option value="Gold">Gold</option>
+        <option value="Grey">Grey</option>
+        <option value="IndianRed">IndianRed</option>
+        <option value="HotPink">HotPink</option>
+        <option value="Indigo">Indigo</option>
+        <option value="White">White</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+    </select>
+
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+</body>
+</html>

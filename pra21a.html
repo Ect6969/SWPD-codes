@@ -1,0 +1,47 @@
+<!--(21a).To use JavaScript to perform the following
+operations:
+a. calculate the factorial of a given number entered
+into a textbox. Display the result in another textbox.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-21a | tapas soni</title>
+    <script>
+        function calculateFactorial() {
+            // Get the input value from the textbox
+            const inputValue = document.getElementById('numberInput').value;
+
+            // Convert the input value to a number
+            const number = parseInt(inputValue);
+
+            // Check if the input is a valid non-negative integer
+            if (!isNaN(number) && number >= 0) {
+                // Calculate factorial
+                let factorial = 1;
+                for (let i = 2; i <= number; i++) {
+                    factorial *= i;
+                }
+
+                // Display the result in the output textbox
+                document.getElementById('resultOutput').value = factorial;
+            } else {
+                // Display an error message if the input is invalid
+                alert('Please enter a valid non-negative integer.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculate Factorial</h1>
+
+    <label for="numberInput">Enter a non-negative integer:</label>
+    <input type="text" id="numberInput">
+
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+
+    <label for="resultOutput">Factorial:</label>
+    <input type="text" id="resultOutput" readonly>
+</body>
+</html>
