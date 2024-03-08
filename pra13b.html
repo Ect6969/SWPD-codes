@@ -1,0 +1,40 @@
+<!--To use JavaScript to perform the following
+operations:  
+b.find the highest from given three values-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-13b | tapas soni</title>
+    <script>
+        function findHighestValue(value1, value2, value3) {
+            return Math.max(value1, value2, value3);
+        }
+
+        function findAndDisplayHighest() {
+            const value1 = parseFloat(document.getElementById('value1').value);
+            const value2 = parseFloat(document.getElementById('value2').value);
+            const value3 = parseFloat(document.getElementById('value3').value);
+
+            const highestValue = findHighestValue(value1, value2, value3);
+
+            alert('The highest value is: ' + highestValue);
+        }
+    </script>
+</head>
+<body>
+    <h1>Find Highest Value</h1>
+
+    <label for="value1">Enter value 1:</label>
+    <input type="text" id="value1"><br><br>
+
+    <label for="value2">Enter value 2:</label>
+    <input type="text" id="value2"><br><br>
+
+    <label for="value3">Enter value 3:</label>
+    <input type="text" id="value3"><br><br>
+
+    <button onclick="findAndDisplayHighest()">Find Highest Value</button>
+</body>
+</html>

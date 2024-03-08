@@ -1,0 +1,57 @@
+<!--(13a). To use JavaScript to perform the following
+operations:
+a. find roots of quadratic equation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-13a | tapas soni</title>
+    <script>
+        function findRoots(a, b, c) {
+            const discriminant = b * b - 4 * a * c;
+
+            if (discriminant > 0) {
+                const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                return [root1, root2];
+            } else if (discriminant === 0) {
+                const root = -b / (2 * a);
+                return [root];
+            } else {
+                return []; 
+            }
+        }
+
+        function solveQuadratic() {
+            const a = parseFloat(document.getElementById('coefficientA').value);
+            const b = parseFloat(document.getElementById('coefficientB').value);
+            const c = parseFloat(document.getElementById('coefficientC').value);
+
+            const roots = findRoots(a, b, c);
+
+            if (roots.length === 0) {
+                alert('No real roots.');
+            } else if (roots.length === 1) {
+                alert('One real root: ' + roots[0]);
+            } else {
+                alert('Two real roots: ' + roots[0] + ' and ' + roots[1]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Quadratic Equation Solver</h1>
+
+    <label for="coefficientA">Enter coefficient a:</label>
+    <input type="text" id="coefficientA"><br><br>
+
+    <label for="coefficientB">Enter coefficient b:</label>
+    <input type="text" id="coefficientB"><br><br>
+
+    <label for="coefficientC">Enter coefficient c:</label>
+    <input type="text" id="coefficientC"><br><br>
+
+    <button onclick="solveQuadratic()">Find Roots</button><br>
+</body>
+</html>

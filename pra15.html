@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15 | tapas soni</title>
+    <script>
+        function checkVowelOrConsonant(character) {
+            character = character.toLowerCase();
+
+            switch (character) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    return 'Vowel';
+                default:
+                    if (character >= 'a' && character <= 'z') {
+                        return 'Consonant';
+                    } else {
+                        return 'Not a valid alphabet character';
+                    }
+            }
+        }
+
+        function checkAndDisplayResult() {
+            const inputCharacter = document.getElementById('inputCharacter').value.trim();
+
+            if (inputCharacter.length === 1) {
+                const result = checkVowelOrConsonant(inputCharacter);
+                alert('The character \'' + inputCharacter + '\' is a ' + result);
+            } else {
+                alert('Please enter a single alphabet character.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Vowel or Consonant Checker</h1>
+
+    <label for="inputCharacter">Enter a single character:</label>
+    <input type="text" id="inputCharacter">
+
+    <button onclick="checkAndDisplayResult()">Check</button>
+</body>
+</html>

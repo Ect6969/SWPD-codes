@@ -1,0 +1,148 @@
+<!--(12b). To create and format your class time table Page
+Using Different CSS Elements (Note: use CSS Background, Text, Font, Tables, Links,
+Images, Margin etc)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Practical-12b | tapas soni</title>
+    <style>
+        body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.timetable {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+
+  <header>
+    <h1>Class Timetable</h1>
+  </header>
+
+  <section class="timetable">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>09:00 - 10:00</td>
+          <td>Sub1</td>
+          <td>Sub1</td>
+          <td>Sub1</td>
+          <td>Sub1</td>
+          <td>Sub1</td>
+        </tr>
+
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td>Sub2</td>
+            <td>Sub2</td>
+            <td>Sub2</td>
+            <td>Sub2</td>
+            <td>Sub2</td>
+          </tr>
+
+          <tr>
+            <td>11:00 - 12:00</td>
+            <td>Sub3</td>
+            <td>Sub3</td>
+            <td>Sub3</td>
+            <td>Sub3</td>
+            <td>Sub3</td>
+          </tr>
+
+          <tr>
+            <td>12:00 - 13:00</td>
+            <td>Sub4</td>
+            <td>Sub4</td>
+            <td>Sub4</td>
+            <td>Sub4</td>
+            <td>Sub4</td>
+          </tr>
+
+          <tr>
+            <td>13:00 - 14:00</td>
+            <td>Sub5</td>
+            <td>Sub5</td>
+            <td>Sub5</td>
+            <td>Sub5</td>
+            <td>Sub5</td>
+          </tr>
+
+          <tr>
+            <td>14:00 - 15:00</td>
+            <td>Sub6</td>
+            <td>Sub6</td>
+            <td>Sub6</td>
+            <td>Sub6</td>
+            <td>Sub6</td>
+          </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Designed by Tapas Soni</p>
+  </footer>
+
+</body>
+</html>
