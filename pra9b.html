@@ -1,0 +1,98 @@
+<!--(9b). To create student feedback form using different
+HTML form elements.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-9b | tapas soni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post">
+        <h2>Student Feedback Form</h2>
+
+        <!-- Personal Information Section -->
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required>
+
+        <!-- Feedback Section -->
+        <label for="feedbackType">Feedback Type:</label>
+        <select id="feedbackType" name="feedbackType" required>
+            <option value="complaint">Complaint</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="compliment">Compliment</option>
+        </select>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+        <br>
+        <!-- Rating Section -->
+        <label>Rate the course:</label>
+        <div>
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5">5</label>
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4">4</label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">3</label>
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2">2</label>
+            <input type="radio" id="rating1" name="rating" value="1">
+            <label for="rating1">1</label>
+        </div>
+
+        <!-- Additional Comments Section -->
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+</body>
+</html>
