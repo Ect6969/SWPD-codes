@@ -1,0 +1,41 @@
+<!--(17). To use JavaScript to calculate power of given
+number.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-17</title>
+    <script>
+        function calculatePower(base, exponent) {
+            return Math.pow(base, exponent);
+        }
+
+        function calculateAndDisplayPower() {
+            const base = parseFloat(document.getElementById('base').value);
+            const exponent = parseInt(document.getElementById('exponent').value);
+
+            if (!isNaN(base) && !isNaN(exponent)) {
+                const result = calculatePower(base, exponent);
+                const resultElement = document.getElementById('result');
+                resultElement.textContent = 'Result: ' + result;
+            } else {
+                alert('Please enter valid numbers for base and exponent.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculate Power</h1>
+
+    <label for="base">Enter the base:</label>
+    <input type="text" id="base"><br><br>
+
+    <label for="exponent">Enter the exponent:</label>
+    <input type="text" id="exponent"><br><br>
+
+    <button onclick="calculateAndDisplayPower()">Calculate Power</button>
+
+    <p id="result"></p>
+</body>
+</html>

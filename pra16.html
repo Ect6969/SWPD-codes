@@ -1,0 +1,28 @@
+<!--(16). To use JavaScript to print first 10 even numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-16 | tapas soni</title>
+    <script>
+        function printEvenNumbers() {
+            const evenNumbers = [];
+
+            for (let i = 2; evenNumbers.length < 10; i += 2) {
+                evenNumbers.push(i);
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = 'First 10 even numbers: ' + evenNumbers.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Print First 10 Even Numbers</h1>
+
+    <button onclick="printEvenNumbers()">Print Even Numbers</button>
+
+    <p id="result"></p>
+</body>
+</html>

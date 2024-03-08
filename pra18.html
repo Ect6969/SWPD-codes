@@ -1,0 +1,43 @@
+<!--(18). To use JavaScript to print multiplication table of
+given number.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-18 | tapas soni</title>
+    <script>
+        function generateMultiplicationTable(number) {
+            const table = [];
+
+            for (let i = 1; i <= 10; i++) {
+                table.push(`${number} x ${i} = ${number * i}`);
+            }
+
+            return table;
+        }
+
+        function generateAndDisplayTable() {
+            const inputNumber = parseInt(document.getElementById('inputNumber').value);
+
+            if (!isNaN(inputNumber)) {
+                const table = generateMultiplicationTable(inputNumber);
+                const resultElement = document.getElementById('result');
+                resultElement.innerHTML = '<h2>Multiplication Table</h2>' + table.join('<br>');
+            } else {
+                alert('Please enter a valid number.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+
+    <label for="inputNumber">Enter a number:</label>
+    <input type="text" id="inputNumber">
+
+    <button onclick="generateAndDisplayTable()">Generate Table</button>
+
+    <div id="result"></div>
+</body>
+</html>

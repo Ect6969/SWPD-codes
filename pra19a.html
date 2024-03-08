@@ -1,0 +1,44 @@
+<!--To use JavaScript user defined functions to perform
+the following operations:
+a. to calculate sum of 1 to n-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-19a | tapas soni</title>
+    <script>
+        function calculateSum(n) {
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        function calculateAndDisplaySum() {
+            const inputValue = parseInt(document.getElementById('inputValue').value);
+
+            if (!isNaN(inputValue) && inputValue > 0) {
+                const result = calculateSum(inputValue);
+                const resultElement = document.getElementById('result');
+                resultElement.textContent = 'Sum of 1 to ' + inputValue + ' is: ' + result;
+            } else {
+                alert('Please enter a valid positive integer.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculate Sum of 1 to n</h1>
+
+    <label for="inputValue">Enter a positive integer (n):</label>
+    <input type="text" id="inputValue">
+
+    <button onclick="calculateAndDisplaySum()">Calculate Sum</button>
+
+    <p id="result"></p>
+</body>
+</html>
